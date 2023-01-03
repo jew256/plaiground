@@ -1,0 +1,158 @@
+/* Global styles */
+body {
+    font-family: sans-serif;
+    color: #eee;
+    background-color: #222;
+  }
+  
+  a {
+    color: #0cf;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+
+  .title-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0 0 10px 10px;  /* Add rounded corners at the bottom */
+    background-color: #222; 
+    z-index: 1;  /* Set the z-index to 1 to make the title bar go over other content */
+  }
+  
+  .title-bar a {
+    color: #eee;
+    font-size: 18px;
+    padding: 20px;
+    cursor: pointer;
+  }
+  
+  .title-bar a:hover {
+    background-color: #444;
+  }
+  
+  
+  /* Hero image with a contact me button */
+  .hero {
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .hero img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+  }
+
+  .hero-overlay {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    text-align: center;
+  }
+  
+  .hero-overlay h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+  
+  .hero-overlay p {
+    font-size: 18px;
+  }
+  
+
+  .try-button {
+    background-color: #0cf;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: 50px;
+    border-radius: 25px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }  
+  
+  .contact-button:hover {
+    background-color: #00b;
+  }
+  
+  /* Dropdown menu to auto-scroll to different sections of the page */
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #333;
+  }
+  
+  .navbar select {
+    background-color: #222;
+    color: #eee;
+    border: none;
+    font-size: 18px;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  /* Description, interactive, FAQ, contact, and about sections */
+  .section {
+    padding: 50px;
+  }
+  
+  .section h2 {
+    color: #0cf;
+  }
+  
+  .section p {
+    font-size: 18px;
+    line-height: 1.5;
+  }
+  
+  /* Form in the contact me section */
+  .section form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .section form label {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .section form input,
+  .section form textarea {
+    background-color: #333;
+    border: none;
+    border-radius: 4px;
+    color: #eee;
+    font-size: 18px;
+    padding: 10px;
+  }
+  
+  .section form button {
+    background-color: #0cf;
+    border: none;
+    color: #fff;
+    font-size: 18px;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  
+  .section form button:hover {
+    background-color: #00b;
+  }
+  

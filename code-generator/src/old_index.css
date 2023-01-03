@@ -1,0 +1,86 @@
+/* Set the background color to a dark shade */
+body {
+    background-color: #333333;
+  }
+  
+  /* Set the text color to a light shade */
+  body, input {
+    color: #EEEEEE;
+  }
+  
+  /* Set the color of links to a light shade */
+  a {
+    color: #CCCCCC;
+  }
+  
+  /* Set the color of links on hover to a brighter shade */
+  a:hover {
+    color: #FFFFFF;
+  }
+  
+  /* Set the background color of form fields to a medium shade */
+  input[type="text"], input[type="email"], input[type="password"], textarea, select {
+    background-color: #555555;
+    border: none;
+  }
+  
+  /* Set the background color of form fields on focus to a lighter shade */
+  input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus, textarea:focus, select:focus {
+    background-color: #777777;
+  }
+  
+  /* Set the background color of the submit button to a bright shade */
+  input[type="submit"] {
+    background-color: #009900;
+    color: #FFFFFF;
+    border: none;
+  }
+  
+  /* Set the background color of the submit button on hover to a slightly brighter shade */
+  input[type="submit"]:hover {
+    background-color: #00CC00;
+  }
+  
+  /* Set the border radius of form fields and the submit button to create a more modern, rounded look */
+  input[type="text"], input[type="email"], input[type="password"], textarea, select, input[type="submit"] {
+    border-radius: 5px;
+  }
+  
+  /* Add some padding to form fields and the submit button to give them some breathing room */
+  input[type="text"], input[type="email"], input[type="password"], textarea, select, input[type="submit"] {
+    padding: 10px;
+  }
+  
+  /* Set the background color of radio buttons and checkboxes to a medium shade */
+  input[type="radio"], input[type="checkbox"] {
+    background-color: #555555;
+  }
+  
+  /* Set the border color of radio buttons and checkboxes to a lighter shade */
+  input[type="radio"], input[type="checkbox"] {
+    border: 1px solid #777777;
+  }
+  
+  /* Set the color of radio buttons and checkboxes on hover to a brighter shade */
+  input[type="radio"]:hover, input[type="checkbox"]:hover {
+    border-color: #999999;
+  }
+  
+  /* Set the color of selected radio buttons and checkboxes to a brighter shade */
+  input[type="radio"]:checked, input[type="checkbox"]:checked {
+    background-color: #009900;
+    border-color: #009900;
+  }
+
+  .display-linebreak {
+    white-space: pre-line;
+    color: '#CCCCCC';
+    font-size: '16px';
+    margin: '10px';
+    width: 'auto';
+    background-color: '#333333';
+    border-radius: '5px';
+    box-shadow: '0px 0px 10px #000000';
+    display: 'flex';
+    text-align: left;
+  }  
