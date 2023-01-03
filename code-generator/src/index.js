@@ -182,7 +182,6 @@ const App = () => {
             <a href="#description">Description</a>
             <a href="#interactive">Interactive</a>
             <a href="#faq">FAQ</a>
-            <a href="#contact">Contact Me</a>
             </div>
 
             {/* Hero image with a contact me button */}
@@ -216,23 +215,6 @@ const App = () => {
                 <h3>A graph appeared, but it's not what I was looking for. How can I graph what I want?</h3>
                 <p>There's no guarantee the graphs will be correct. Sometimes a script will be written that graphs an insight that was not expected. Please try describing the insight you are looking for in more detail, especially if it is calculated from other data.</p>
                 {/* Add more questions and answers as needed */}
-            </div>
-
-            {/* Contact me section */}
-            <div id="contact" className="section">
-                <h2>Contact Me</h2>
-                <form>
-                <label htmlFor="name">Name:</label>
-                <input type="text" id="name" name="name" />
-                <br />
-                <label htmlFor="email">Email:</label>
-                <input type="email" id="email" name="email" />
-                <br />
-                <label htmlFor="message">Message:</label>
-                <textarea id="message" name="message"/>
-                <br />
-                <button type="submit">Send</button>
-                </form>
             </div>
         </>
     );
