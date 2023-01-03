@@ -1,9 +1,7 @@
-import io
 from flask import Flask, request, jsonify, send_file
 from matplotlib.backends.backend_agg import FigureCanvasAgg as FigureCanvas
 from flask_cors import CORS
 import openai
-import os
 import subprocess
 import time
 import config
@@ -63,7 +61,7 @@ def plot_png(id):
 @app.route('/output', methods=['GET'])
 def output():
     with open('output.txt', 'r') as f:
-        text = f.read()  # Read the contents of the file into a string
+        text = f.read() 
     return text
 
 if __name__ == "__main__":
