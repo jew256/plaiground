@@ -1,2 +1,0 @@
-OPENAI_API_KEY = "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"
-STOCK_API_KEY = "celu2r2ad3idmb1vc5f0celu2r2ad3idmb1vc5fg"
