@@ -91,10 +91,10 @@ class FormBox extends Component{
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(jsonData)
         };
-        const response = await fetch('http://127.0.0.1:5000/code', requestOptions);
+        const response = await fetch('https://jew256.pythonanywhere.com/code', requestOptions);
         const data = await response.json();
 
-        await fetch('http://127.0.0.1:5000/plot'  + data.responses[0])
+        await fetch('https://jew256.pythonanywhere.com/plot'  + data.responses[0])
             .then(response => response.blob())
             .then(blob => {
                 // Create an object URL from the Blob
@@ -102,7 +102,7 @@ class FormBox extends Component{
                 this.setState({response: url}); // Update the state with the image URL
             });
 
-            await fetch('http://127.0.0.1:5000/output')
+            await fetch('https://jew256.pythonanywhere.com/output')
             .then(response => response.text())
             .then(text => {
                 this.setState({output: text}); 
@@ -190,7 +190,7 @@ const App = () => {
                     <h1>Plaiground</h1>
                     <p>An exploration into insights of AI</p>
                 </div>
-                <img src="/hero.png" alt="Hero image" />
+                <img src="hero.png" alt="Hero image" />
                 <button className="try-button" onClick={handleClick}>Try it out!</button>
             </div>
 
