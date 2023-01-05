@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/plaiground/static/css/main.89560c3a.css",
-    "main.js": "/plaiground/static/js/main.240521b1.js",
+    "main.js": "/plaiground/static/js/main.f045e1b4.js",
     "index.html": "/plaiground/index.html",
     "main.89560c3a.css.map": "/plaiground/static/css/main.89560c3a.css.map",
-    "main.240521b1.js.map": "/plaiground/static/js/main.240521b1.js.map"
+    "main.f045e1b4.js.map": "/plaiground/static/js/main.f045e1b4.js.map"
   },
   "entrypoints": [
     "static/css/main.89560c3a.css",
-    "static/js/main.240521b1.js"
+    "static/js/main.f045e1b4.js"
   ]
 }
