@@ -4,18 +4,19 @@ from flask_cors import CORS
 import openai
 import subprocess
 import time
-import config
+# import config
+import os
 
 app = Flask(__name__)
 CORS(app)
 
-openai.api_key = config.OPENAI_API_KEY
+# openai.api_key = config.OPENAI_API_KEY
+openai.api_key = os.getenv("OPENAI_API_KEY")
 openai.api_base = "https://api.openai.com/v1"
 
 @app.route("/", methods=['GET'])
 def root():
-    return jsonify({'message': 'Welcome to the party'})
-    
+    return jsonify({'message': 'Welcome to the party'})    
 
 @app.route("/code", methods=['POST'])
 def code_call():
@@ -26,8 +27,8 @@ def code_call():
     for message in code_json.values():
         req = f"""
 \"\"\"
-wrap in a try, except. if the request succeeds, write "Successful" to `output.txt`
-in the except case, instead graph an error symbol and write 'Error: ', and the error to `output.txt`
+wrap in a try, except. if the request succeeds, write "Successful" to `output{i}.txt`
+in the except case, instead graph an error symbol and write 'Error: ', and the error to `output{i}.txt`
 also in the except case, write a hint for a better prompt to `output.txt`
 make the dates readable
 the free version is being used, do not use premium features.

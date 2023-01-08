@@ -1,1 +1,2 @@
-Successful
+Error: string indices must be integers
+Hint: Make sure to use the correct stock symbols and to use the free version of the Yahoo Finance API.

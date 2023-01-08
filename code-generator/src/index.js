@@ -102,7 +102,7 @@ class FormBox extends Component{
                 this.setState({response: url}); // Update the state with the image URL
             });
 
-            await fetch('https://jew256.pythonanywhere.com/output')
+            await fetch('https://jew256.pythonanywhere.com/output' + data.responses[0])
             .then(response => response.text())
             .then(text => {
                 this.setState({output: text}); 

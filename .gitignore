@@ -1,3 +1,4 @@
 config.py
 instructions.txt
 code-generator/package-lock.json
+__pycache__
