@@ -29,7 +29,7 @@ def code_call():
 \"\"\"
 wrap in a try, except. if the request succeeds, write "Successful" to `output{i}.txt`
 in the except case, instead graph an error symbol and write 'Error: ', and the error to `output{i}.txt`
-also in the except case, write a hint for a better prompt to `output.txt`
+also in the except case, write a hint for a better prompt to `output{i}.txt`
 make the dates readable
 the free version is being used, do not use premium features.
 make sure to plot data for the requested period, if given
