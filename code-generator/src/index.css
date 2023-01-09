@@ -108,6 +108,12 @@ a:hover {
   cursor: pointer;
 }
 
+@media (max-width: 768px) {
+  .interactive {
+    flex-direction: column;
+  }
+}
+
 .interactive {
   display: flex;
   align-items: center;
@@ -135,10 +141,8 @@ a:hover {
 
 .interactive textarea {
   font-size: '16px';
-  min-width: '100%';
-  width: 'auto';
-  height: 'auto';
-  min-height: '300px';
+  width: '75%';
+  height: '300px';
   overflow-wrap: "break-word";
   overflow: 'visible';
   background-color: #555;
