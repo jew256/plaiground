@@ -3,7 +3,6 @@ import { ReactDOM, render } from "react-dom"
 import * as ReactDOMClient from 'react-dom/client';
 import './index.css'
 
-
 class RequestForm extends Component {
     constructor(props){
         super(props);
@@ -66,7 +65,8 @@ class FormBox extends Component{
         this.state = {
             request: "",
             output: "Waiting for a request",
-            response: "default.png"
+            response: "default.png",
+            loading: false
         };
 
         this.handleChange = this.handleChange.bind(this);
@@ -78,6 +78,7 @@ class FormBox extends Component{
     }
 
     async handleSubmit(event){
+
         var send_message = 'A request was submitted:\nWorking on a response. This will take a few seconds.';
         alert(send_message);
         event.preventDefault();
@@ -86,6 +87,7 @@ class FormBox extends Component{
             request: this.state.request
         }
 
+        this.setState({loading: true});
         const requestOptions = {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
@@ -105,64 +107,33 @@ class FormBox extends Component{
             await fetch('https://jew256.pythonanywhere.com/output' + data.responses[0])
             .then(response => response.text())
             .then(text => {
-                this.setState({output: text}); 
+                this.setState({output: text, loading: false});
             });
     }
 
     render() {
         return (
-            <div style={{display: 'flex', justifyContent: 'space-between'}}>
-                <form style={{
-                width: '50%',
-                display: 'flex',
-                flexDirection: 'column'
-                }} onSubmit={this.handleSubmit}>
-                <textarea type="text" style={{
-                    fontSize: '16px',
-                    minWidth: '100%',
-                    width: 'auto',
-                    height: 'auto',
-                    minHeight: '300px',
-                    overflowWrap: "break-word",
-                    overflow: 'visible',
-                    backgroundColor: '#555555',
-                    border: 'none',
-                    borderRadius: '5px',
-                    padding: '10px'
-                }} value = {this.state.value}  onChange={this.handleChange}/>
-                <input type="submit" value="Submit" style={{
-                    minWidth: '100%',
-                    width: 'auto',
-                    minHeight: '100px',
-                    backgroundColor: '#0cf',
-                    color: '#FFFFFF',
-                    border: 'none',
-                    borderRadius: '5px',
-                    padding: '20px',
-                    fontSize: '20px'
-                }} />
-                </form>
-                <p/>
-                {/* <div className="display-linebreak">{this.state.response}</div> */}
-                <div style = {{width: '50%', textAlign: 'center'}}>
-                    {this.state.response ? (
-                        // If the image URL is available, display the image
-                        <img src={this.state.response} alt="My image" />
-                    ) : (
-                        // Otherwise, display a loading message
-                        <p>Loading image...</p>
-                    )}
-                    <p style={{
-                        fontSize: '16px',
-                        minWidth: '100%',
-                        width: 'auto',
-                        minHeight: '10px',
-                        backgroundColor: '#555555',
-                        border: 'none',
-                        borderRadius: '5px',
-                        padding: '10px'
-                    }}> {this.state.output} </p>
+            <div className="interactive">
+                <div className="interactive-left-column">
+                    <form onSubmit={this.handleSubmit} className="interactive-form">
+                        <textarea type="text" value = {this.state.value}  onChange={this.handleChange} className="interactive-textarea"/>
+                        <input type="submit" value="Submit" className="interactive-submit"/>
+                    </form>
                 </div>
+
+                <div className="interactive-right-column">
+                    <div className="interactive-image-container">
+                        {this.state.loading ? (
+                            <img src={"loading.gif"} alt="Loading image..." className="interactive-loading-image"/>
+                        ) : (
+                            // If the image URL is available, display the image
+                            <img src={this.state.response} alt="No image produced yet" className="interactive-image"/>
+                        )}
+                        <p className="interactive-output"> {this.state.output} </p>
+                    </div>
+                </div>
+                
+                
             </div>
           );
     }
