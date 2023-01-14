@@ -31,7 +31,6 @@ wrap in a try, except. if the request succeeds, write "Successful" to `output{i}
 in the except case, instead graph an error symbol and write 'Error: ', and the error to `output{i}.txt`
 also in the except case, write a hint for a better prompt to `output{i}.txt`
 make the dates readable
-the free version is being used, do not use premium features.
 make sure to plot data for the requested period, if given
 1. use the yahoo finance api to get any stock data
 2. Create a figure and set the style to dark

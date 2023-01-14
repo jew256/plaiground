@@ -11,3 +11,8 @@
 - In a seperate terminal, navigate to `code-generator/`
 - Run `npm install`
 - Run `npm run start` to start the application
+
+## Some examples
+[algo](readme_images/algo.png)
+[bands](readme_images/bands.png)
+[covid](readme_images/covid.png)
