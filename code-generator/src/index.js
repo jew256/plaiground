@@ -7,7 +7,7 @@ class RequestForm extends Component {
     constructor(props){
         super(props);
         this.state = {
-            value: "Please enter your request here. For example: \"Graph Apple's closing price for 2020\""
+            value: "Please enter your request below. For example: \"Graph Apple's closing price for 2020\""
         };
 
         this.handleChange = this.handleChange.bind(this);
@@ -181,11 +181,17 @@ const App = () => {
             {/* FAQ section */}
             <div id="faq" className="section">
                 <h2>FAQ</h2>
-                <h3>I made a request, but the previous image hasn't changed and no error was displayed. What's wrong?</h3>
+                <h3>I made a request, but the image is the same as before and no error was displayed. What's wrong?</h3>
                 <p>In this case a valid script was not able to be generated. Please try a differently worded request.</p>
                 <h3>A graph appeared, but it's not what I was looking for. How can I graph what I want?</h3>
                 <p>There's no guarantee the graphs will be correct. Sometimes a script will be written that graphs an insight that was not expected. Please try describing the insight you are looking for in more detail, especially if it is calculated from other data.</p>
-                {/* Add more questions and answers as needed */}
+            </div>
+
+            {/* Footer */}
+            <div className="footer">
+                <p>Powered by <a href="https://openai.com">OpenAI</a>'s API</p>
+                <p>Images by <a href="https://midjourney.com">Midjourney</a></p>
+                <p>Designed by <a href="https://github.com/jew256/">Jack Williamson</a></p>
             </div>
         </>
     );
