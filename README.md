@@ -1,7 +1,7 @@
 # plaiground
 
 ## Try it out [online!](https://jew256.github.io/plaiground/)
-Unfortunately, I have run out of openAI requests currently, so this site is down :(
+Unfortunately, I have run out of openAI requests, so this site is down :(
 
 ## How to run locally
 - Download the source code
